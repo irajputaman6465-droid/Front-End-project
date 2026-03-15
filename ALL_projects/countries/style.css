@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+body {
+    background: #f4f7fb;
+    min-height: 100vh;        /* ✅ changed from height to min-height */
+    display: flex;
+    flex-direction: column;
+}
+ 
+/* HEADER */
+ 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #1f2937;
+    color: white;
+}
+ 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+ 
+.controls {
+    display: flex;
+    gap: 12px;
+}
+ 
+.controls input,
+.controls select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+}
+ 
+/* MAIN AREA */
+ 
+main {
+    flex: 1;
+    padding: 20px 40px;
+    overflow: hidden;
+}
+ 
+/* SCROLLABLE CONTAINER */
+ 
+.countries-container {
+    height: 75vh;
+    overflow-y: auto;          /* ✅ this is what enables scrolling */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+ 
+/* TABLE */
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+ 
+/* STICKY TABLE HEADER */
+ 
+th {
+    position: sticky;
+    top: 0;
+    background: #111827;
+    color: white;
+    text-align: left;
+    padding: 14px;
+    z-index: 2;
+}
+ 
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+ 
+tr:hover {
+    background: #f3f4f6;
+}
+ 
+.flag {
+    width: 40px;
+    border-radius: 4px;
+}
+ 
+/* SCROLLBAR */
+ 
+.countries-container::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+.countries-container::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 10px;
+}
+ 
+/* BACK TO TOP BUTTON */
+ 
+#backToTop {
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+    width: 46px;
+    height: 46px;
+    background: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    z-index: 999;
+}
+ 
+#backToTop.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+ 
+#backToTop:hover {
+    background: #374151;
+    transform: translateY(-3px);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries Explorer</title>
+ 
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ 
+    <!-- HEADER -->
+    <header class="header">
+ 
+        <h1 class="logo">🌍 Countries Explorer</h1>
+ 
+        <div class="controls">
+ 
+            <!-- SEARCH BAR -->
+            <input type="text" id="searchInput" placeholder="Search country...">
+ 
+            <!-- REGION FILTER -->
+            <select id="regionFilter">
+                <option value="">Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+ 
+        </div>
+ 
+    </header>
+ 
+ 
+    <!-- MAIN CONTENT -->
+    <main>
+ 
+        <!-- COUNTRIES LIST -->
+        <section id="countriesList" class="countries-container">
+ 
+            <table id="countriesTable">
+                <thead>
+                    <tr>
+                        <th>Flag</th>
+                        <th>Country</th>
+                        <th>Capital</th>
+                        <th>Currency</th>
+                    </tr>
+                </thead>
+ 
+                <tbody id="tableBody">
+                    <!-- JS will insert rows here -->
+                </tbody>
+            </table>
+ 
+        </section>
+ 
+    </main>
+ 
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" title="Back to top">&#8679;</button>
+ 
+    <!-- JS FILE -->
+    <script src="script.js"></script>
+ 
+</body>
+ 
+</html>
